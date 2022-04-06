@@ -1,0 +1,3 @@
+id	filename	md5	size	state
+217d72e9-4d6f-409d-911c-0a70b17a0adc	217d72e9-4d6f-409d-911c-0a70b17a0adc/unc.edu.b469eb7c-723f-4870-b4e4-ebfaae7a118b.1536566.rsem.genes.normalized_results	beda9f89f08fc6a892a72e8b704fdbd9	437283	validated
+973ce0ac-f613-4b99-b2ab-3e2d5548f05f	973ce0ac-f613-4b99-b2ab-3e2d5548f05f/unc.edu.152afe8c-f67c-4d7c-93ac-e1b7edd56c54.1544649.rsem.genes.normalized_results	84478e78d95e1155019ccb7e0e0fea2f	436272	validated
