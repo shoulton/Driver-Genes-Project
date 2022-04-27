@@ -3,6 +3,7 @@ library(dplyr)
 library(DT)
 library(SummarizedExperiment)
 
+
 query <- GDCquery(
   project = "TCGA-GBM",
   data.category = "Gene expression",
@@ -20,3 +21,17 @@ data <- GDCprepare(query)
 datatable(as.data.frame(colData(data)),
           options = list(scrollX = TRUE, keys = TRUE, pageLength = 5), 
           rownames = FALSE)
+
+
+query_maf <- GDCquery(project = "TCGA-COAD",
+                data.category = "Simple Nucleotide Variation",
+                data.type = "Masked Somatic Mutation",
+                legacy = F)
+GDCdownload(query_maf, directory = "GDCdata/")
+maf = GDCprepare(query_maf, directory = "GDCdata/")
+# Only first 50 to make render faster
+datatable(maf[1:20,],
+          filter = 'top',
+          options = list(scrollX = TRUE, keys = TRUE, pageLength = 5), 
+          rownames = FALSE)
+
